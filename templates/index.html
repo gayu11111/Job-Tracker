@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobTrack - Job Application Tracker</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>JobTrack</h1>
+        <p>Track your job applications in one place</p>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Add Job Application</h2>
+
+            <form id="jobForm">
+                <input type="text" id="company"
+                       placeholder="Company Name" required>
+
+                <input type="text" id="role"
+                       placeholder="Job Role" required>
+
+                <input type="date" id="applied_date" required>
+
+                <select id="status">
+                    <option value="Applied">Applied</option>
+                    <option value="Interview">Interview</option>
+                    <option value="Selected">Selected</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+
+                <button type="submit">Add Application</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>My Applications</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Role</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="jobList"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
